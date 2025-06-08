@@ -1,0 +1,225 @@
+/* Header Styles */
+.br-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  z-index: 1000;
+  background-color: var(--header-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--header-border);
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.br-header__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar_openClose_toggle_menu {
+  display: block;
+  cursor: pointer;
+  color: var(--logo-border);
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.sidebar_openClose_toggle_menu:hover {
+  background-color: var(--theme-btn-bg);
+}
+
+.br-header__site-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Sincly Logo Styles */
+.sincly-logo {
+  width: 40px;
+  height: 40px;
+  background-color: var(--logo-bg);
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--logo-text);
+  font-family: 'Poppins', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.15);
+  transition: all 0.3s ease;
+}
+
+.sincly-logo:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.sincly-logo-small {
+  width: 32px;
+  height: 32px;
+  background-color: var(--logo-bg);
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--logo-text);
+  font-family: 'Poppins', Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.15);
+  transition: all 0.3s ease;
+}
+
+.sincly-text {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--logo-brand-text);
+  font-family: 'Poppins', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.sincly-text-small {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--logo-brand-text);
+  font-family: 'Poppins', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.br-header__right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  color: var(--theme-btn-color) !important;
+  background-color: var(--theme-btn-bg) !important;
+  border-radius: 8px !important;
+  border: none !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--theme-btn-hover) !important;
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: 0 0 0 2px var(--theme-btn-color) !important;
+}
+
+.theme-toggle-btn:active {
+  outline: none !important;
+  border: none !important;
+  transform: scale(0.98);
+}
+
+/* User Profile Styles */
+.user_profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--header-border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  object-fit: cover;
+  background-color: var(--logo-bg);
+}
+
+.user-profile-avatar:hover {
+  transform: scale(1.05);
+  border-color: var(--theme-btn-color);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
+}
+
+/* Dark theme specific adjustments */
+body.dark .sincly-logo {
+  box-shadow: 0 2px 8px rgba(129, 140, 248, 0.2);
+}
+
+body.dark .sincly-logo:hover {
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
+}
+
+body.dark .sincly-logo-small {
+  box-shadow: 0 2px 6px rgba(129, 140, 248, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .br-header {
+    height: 56px;
+    padding: 0 16px;
+  }
+
+
+  .br-header__site-name_logo1 .sincly-logo {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: none;
+  }
+
+  .br-header__site-name_logo2 .sincly-text {
+    font-size: 14px;
+  }
+
+  .user-profile-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .br-header__right {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .br-header {
+    padding: 0 12px;
+  }
+
+  .user_profile {
+    display: none;
+  }
+
+  .br-header__site-name {
+    gap: 6px;
+  }
+}
+
+/* Additional smooth animations */
+.br-header * {
+  transition: all 0.2s ease;
+}
+
+/* Focus states for better accessibility */
+.sidebar_openClose_toggle_menu:focus {
+  outline: 2px solid var(--logo-border);
+  outline-offset: 2px;
+  border: none !important;
+}

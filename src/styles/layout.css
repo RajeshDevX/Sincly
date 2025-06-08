@@ -1,0 +1,50 @@
+.app-container {
+    width: 100%;
+    position: relative;
+    transition: filter 0.3s ease;
+    height: 100vh;
+}
+
+.app-content {
+    width: 100%;
+    margin: auto;
+}
+
+.app-content-container {
+    margin: auto;
+    width: 100%;
+}
+
+.layout-body {
+    display: flex;
+    width: 98%;
+    margin: auto;
+}
+
+.layout-sidebar.open {
+    width: 320px;
+    
+
+}
+
+.layout-sidebar.close {
+    width: 114px;
+    height: 100vh;
+}
+
+@media (max-width: 767px) {
+    .layout-sidebar.close {
+        display: none;
+    }
+
+    .app-container {
+        transition: filter 0.3s ease;
+        width: '100%';
+        margin: auto;
+    }
+
+    .blur-background {
+        filter: blur(5px);
+    }
+
+}

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const themeSlice = createSlice({
   name: 'theme',
   initialState: {
-    theme: 'light',     // light or dark
+    theme: 'dark',     // light or dark
     sidebarOpen: false, // sidebar open/close state
   },
   reducers: {

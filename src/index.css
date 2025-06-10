@@ -14,6 +14,10 @@
   --header-color: #ffffff;
   --card-color: #ffffff;
 
+  --table-header-bg: #f1f5f9;       /* light slate */
+  --table-header-text: #1e293b;     /* dark blue-gray */
+
+
   /* Primary Brand Colors */
   --primary-color: #6366f1;
   /* Modern indigo */
@@ -84,6 +88,9 @@ body.dark {
   --sidebar-color: #1a1a2e;
   --header-color: #16213e;
   --card-color: #1a1a2e;
+
+  --table-header-bg: #1e293b;       /* dark slate */
+  --table-header-text: #e2e8f0;     /* soft light gray */
 
   /* Primary Brand Colors */
   --primary-color: #818cf8;
